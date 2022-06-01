@@ -1,0 +1,169 @@
+<div class="container">
+  <!-- Button trigger modal -->
+  <div class="d-flex justify-content-end mb-4">
+    <button
+      type="button"
+      class="btn btn-primary"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      (click)="openAddEditModal()"
+      #openModalBtn
+    >
+      Add Offer
+    </button>
+  </div>
+
+  <div class="row">
+    <div class="col-3" *ngFor="let offer of offers">
+      <app-card
+        [offer]="offer"
+        (onEditClicked)="onOfferClick(offer)"
+        (onDeleteClicked)="deleteOffer(offer)"
+      ></app-card>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">
+          {{ !editedOffer ? "Add " : "Edit " }}Offer
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form #addProduct="ngForm" (ngSubmit)="onSubmit(addProduct.value)">
+          <div class="form-group">
+            <label>Name</label>
+            <input
+              class="form-control"
+              type="text"
+              name="name"
+              [(ngModel)]="newOffer.name"
+            />
+          </div>
+          <div class="form-group">
+            <label>Description</label>
+            <input
+              class="form-control"
+              type="text"
+              name="description"
+              [(ngModel)]="newOffer.description"
+            />
+          </div>
+          <div class="form-group">
+            <label>Start Date</label>
+            <input
+              class="form-control"
+              type="date"
+              name="description"
+              [(ngModel)]="newOffer.startDate"
+            />
+          </div>
+          <div class="form-group">
+            <label>Expire Date</label>
+            <input
+              class="form-control"
+              type="date"
+              name="description"
+              [(ngModel)]="newOffer.expireDate"
+            />
+          </div>
+          <div class="form-group">
+            <label>Add image</label>
+            <input
+              class="form-control"
+              type="file"
+              (change)="uploadFile($event)"
+            />
+          </div>
+          <div class="form-group" *ngIf="newOffer?.productIds?.length === 0">
+            <label>Stores</label>
+            <ng-select
+              name="stores"
+              [multiple]="true"
+              [(ngModel)]="newOffer.storeIds"
+            >
+              <ng-option
+                *ngFor="let s of stores"
+                [value]="{
+                  storeId: s.id
+                }"
+                >{{ s.name }}</ng-option
+              >
+            </ng-select>
+
+            <br />
+          </div>
+          <div class="form-group" *ngIf="newOffer?.storeIds?.length === 0">
+            <label>Products</label>
+            <ng-select
+              name="products"
+              [multiple]="true"
+              [(ngModel)]="newOffer.productIds"
+            >
+              <ng-option
+                *ngFor="let p of products"
+                [value]="{
+                  storeId: p.id
+                }"
+                >{{ p.name }}</ng-option
+              >
+            </ng-select>
+
+            <br />
+          </div>
+          <label> Status </label>
+          <br />
+          <input
+            name="status"
+            ng-control="options"
+            type="radio"
+            [value]="1"
+            [(ngModel)]="newOffer.status"
+          />Available<br />
+
+          <input
+            name="status"
+            ng-control="options"
+            type="radio"
+            [value]="0"
+            [(ngModel)]="newOffer.status"
+          />Not Available<br />
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              #closeModalBtn
+            >
+              Close
+            </button>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              (click)="submitAddEditModal()"
+            >
+              {{ !editedOffer ? "Add " : "Edit " }}Offer
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
