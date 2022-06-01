@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>G:\Softex\Publish\OfferCrud</_PublishTargetUrl>
+    <History>True|2022-05-30T22:36:24.7425189Z;True|2022-05-31T00:35:38.6620022+02:00;True|2022-05-30T00:26:48.2027031+02:00;</History>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=.%3bDatabase=OfferDB_Test%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="OffersCRUD.Infrastructure.OfferDbContext">
+      <Value>Server=.%3bDatabase=OfferDB_Test%3bTrusted_Connection=True%3bMultipleActiveResultSets=true</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,12 @@
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\bin\Release\net5.0\OffersCRUD.Domain.deps.json
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\bin\Release\net5.0\OffersCRUD.Domain.dll
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\bin\Release\net5.0\ref\OffersCRUD.Domain.dll
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\bin\Release\net5.0\OffersCRUD.Domain.pdb
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\obj\Release\net5.0\OffersCRUD.Domain.csproj.AssemblyReference.cache
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\obj\Release\net5.0\OffersCRUD.Domain.GeneratedMSBuildEditorConfig.editorconfig
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\obj\Release\net5.0\OffersCRUD.Domain.AssemblyInfoInputs.cache
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\obj\Release\net5.0\OffersCRUD.Domain.AssemblyInfo.cs
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\obj\Release\net5.0\OffersCRUD.Domain.csproj.CoreCompileInputs.cache
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\obj\Release\net5.0\OffersCRUD.Domain.dll
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\obj\Release\net5.0\ref\OffersCRUD.Domain.dll
+G:\Offers-Task\OffersCRUD\OffersCRUD.Domain\obj\Release\net5.0\OffersCRUD.Domain.pdb
